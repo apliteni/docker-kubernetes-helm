@@ -21,7 +21,7 @@ RUN set -ex \
 # Install go
 
 COPY --from=go /usr/local/go/ /usr/local/go/
-RUN apk add --no-cache gcc
+RUN apk add --no-cache gcc libc-dev
 
 ENV GOROOT /usr/local/go
 ENV GOPATH /go
